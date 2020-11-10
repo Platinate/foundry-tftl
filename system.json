@@ -1,0 +1,19 @@
+{
+    "name": "foundry-tftl",
+    "title": "Tales from the Loop",
+    "description": "A game system for Tales from the Loop",
+    "author": "Nathan Dolinski",
+    "version": 0.01,
+    "minimumCoreVersion": "0.7.6",
+    "compatibleCoreVersion": "0.7.6",
+    "esmodules": [
+        "tftl.js"
+    ],
+    "styles": [
+        "tftl.css"
+    ],
+    "packs": [],
+    "languages": [],
+    "gridDistance": 5,
+    "gridUnits": "m"
+}

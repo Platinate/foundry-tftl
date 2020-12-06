@@ -1,0 +1,269 @@
+.pc {
+  .window-content {
+    background-color: white !important;
+    background: none;
+  }
+
+  .sheet-body {
+    height: calc(100% - 32px);
+    width: 100%;
+    padding: 10px;
+
+    .tab {
+      height: 100%;
+      width: 100%;
+
+      .editor {
+        height: 100%
+      }
+    }
+  }
+
+  &-sheet {
+
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 35px 120px 1fr;
+    row-gap: 10px;
+
+    label {
+      margin: auto 5px;
+      height: 100%;
+    }
+
+    input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      background: none;
+
+      &:focus {
+        outline-color: transparent !important;
+      }
+    }
+
+    select {
+      height: 100%;
+      width: 100%;
+    }
+
+    &__header {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      width: 100%;
+      height: 100%;
+      column-gap: 10px;
+    }
+
+    &__image {
+
+      width: 180px;
+      height: 180px;
+      background: $primary-background-color;
+      box-sizing: border-box;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid black;
+    }
+
+    &__info {
+      display: grid;
+      border: 2px solid black;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      background: $primary-background-color;
+      box-sizing: border-box;
+      grid-gap: 1px;
+      grid-template: "name type"calc(100%/6) "age luck"calc(100%/6) "drive anchor"calc(100%/6) "problem problem"calc(100%/6) "pride pride"calc(100%/6) "song song"calc(100%/6) / 1fr 1fr;
+
+      label {
+        width: auto;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        width: 120px;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: ":";
+          right: 0;
+        }
+      }
+    }
+
+    &__attributes {
+      display: grid;
+      column-gap: 10px;
+      width: 100%;
+      grid-template-columns: repeat(4, 1fr);
+
+      ul {
+        list-style: none;
+        border: 2px solid black;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        li {
+          height: 30px;
+          font-weight: bold;
+          font-size: 1.2em;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          align-items: center;
+          line-height: 30px;
+          input {
+            background-color: white;
+            width: 30px;
+            height: 25px;
+            text-align: center;
+          }
+        }
+
+        li.attribute {
+          background-color: $primary-color;
+
+        }
+
+        li.skill {
+          background-color: $secondary-background-color;
+        }
+      }
+    }
+
+    &__tabs {
+      border: 2px solid black;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      background: $primary-background-color;
+
+      .tabs {
+        margin: 0 !important;
+
+        .active {
+          background: $secondary-color;
+          text-shadow: none;
+        }
+
+        .item:hover {
+          text-shadow: none;
+          background: $secondary-background-color;
+        }
+      }
+    }
+
+    &__name {
+      display: flex;
+      flex-direction: row;
+      grid-area: name;
+    }
+
+    &__type {
+      display: flex;
+      flex-direction: row;
+      grid-area: type;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    &__age {
+      display: flex;
+      flex-direction: row;
+      grid-area: age;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    &__luck {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      grid-area: luck;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    &__drive {
+      display: flex;
+      flex-direction: row;
+      grid-area: drive;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    &__anchor {
+      display: flex;
+      flex-direction: row;
+      grid-area: anchor;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    &__problem {
+      display: flex;
+      flex-direction: row;
+      grid-area: problem;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    &__pride {
+      display: flex;
+      flex-direction: row;
+      grid-area: pride;
+      box-shadow: 0 0 0 1px #000;
+    }
+
+    &__song {
+      display: flex;
+      flex-direction: row;
+      grid-area: song;
+
+      label {
+        width: 150px
+      }
+    }
+
+    &__conditions {
+      display: grid;
+      height: 35px;
+      border: 2px solid black;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      grid-gap: 1px;
+      grid-template-columns: repeat(6, 1fr);
+
+      div {
+        background: $primary-background-color;
+        padding: 0 5px;
+        overflow: hidden;
+        vertical-align: middle;
+        line-height: 35px;
+      }
+
+      div:first-child {
+        background-color: #000;
+        color: white;
+      }
+
+      div:last-child {
+        background-color: #F9CA9D;
+        color: white;
+      }
+    }
+  }
+}
+
+.condition {
+  &__input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    label {
+      display: block;
+      margin: auto 0;
+      line-height: 32px;
+      flex: 80%;
+    }
+
+    input {
+      flex: 20%;
+    }
+  }
+}

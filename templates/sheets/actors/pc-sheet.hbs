@@ -1,0 +1,102 @@
+<form class="{{cssClass}} pc-sheet" autocomplete="off">
+    <div class="pc-sheet__header">
+        <div class="full pc-sheet__image">
+            <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+        </div>
+        <div class="pc-sheet__info">
+            <div class="pc-sheet__name">
+                <label>{{localize config.infos.name}}</label>
+                <input type="text" name="name" value="{{actor.name}}" placeholder="{{localize config.infos.name}}" />
+            </div>
+            <div class="pc-sheet__type">
+                <label>{{localize config.infos.type}}</label>
+                <select name="data.type">
+                    {{#select data.type}}
+                    {{#each config.types as |type key|}}
+                    <option value="{{key}}">{{localize type}}</option>
+                    {{/each}}
+                    {{/select}}
+                </select>
+            </div>
+            <div class="pc-sheet__age">
+                <label>{{localize config.infos.age}}</label>
+                <input type="number" name="data.age" min="0" data-dtype="Number" value="{{data.age}}" />
+            </div>
+            <div class="pc-sheet__luck">
+                <label>{{localize config.infos.luck}}</label>
+                <input type="number" name="data.luckPoints" min="0" data-dtype="Number" value="{{data.luckPoints}}" />
+            </div>
+            <div class="pc-sheet__drive">
+                <label>{{localize config.infos.drive}}</label>
+                <input type="text" name="data.drive" value="{{data.drive}}"
+                    placeholder="{{localize config.infos.drive}}" />
+            </div>
+            <div class="pc-sheet__anchor">
+                <label>{{localize config.infos.anchor}}</label>
+                <input type="text" name="data.anchor" value="{{data.anchor}}"
+                    placeholder="{{localize config.infos.anchor}}" />
+            </div>
+            <div class="pc-sheet__problem">
+                <label>{{localize config.infos.problem}}</label>
+                <input type="text" name="data.problem" value="{{data.problem}}"
+                    placeholder="{{localize config.infos.problem}}" />
+            </div>
+            <div class="pc-sheet__pride">
+                <label>{{localize config.infos.pride}}</label>
+                <input type="text" name="data.pride" value="{{data.pride}}"
+                    placeholder="{{localize config.infos.pride}}" />
+            </div>
+            <div class="pc-sheet__song">
+                <label>{{localize config.infos.favoriteSong}}</label>
+                <input type="text" name="data.favoriteSong" value="{{data.favoriteSong}}"
+                    placeholder="{{localize config.infos.favoriteSong}}" />
+            </div>
+        </div>
+    </div>
+    <div class="pc-sheet__conditions">
+        <div>CONDITIONS</div>
+        {{#each conditions as |condition|}}
+        <div class="condition__input">
+            <label> {{localize condition.label}} </label>
+            <input type="checkbox" name="data.conditions.{{condition.name}}" data-dtype="Boolean"
+                {{checked condition.isChecked}} />
+        </div>
+        {{/each}}
+    </div>
+
+
+    {{!-- Attributes tab --}}
+    <div class="pc-sheet__attributes">
+        {{#each attributes as |attribute|}}
+        <ul class="list">
+            <li class="attribute {{attribute.name}}">
+                <label>{{localize attribute.label}}</label>
+                <input type="number" name="data.attributes.{{attribute.name}}.current" min="0" data-dtype="Number"
+                    value="{{attribute.value}}" />
+            </li>
+            {{#each attribute.skills as |skill|}}
+            <li class="skill {{skill.name}}">
+                <a class="skill-roll" data-action="roll" data-attribute="{{attribute.name}}" data-skill="{{skill.name}}"><i class="fas fa-dice"></i></a>
+                <label>{{localize skill.label}}</label>
+                <input type="number" name="data.attributes.{{attribute.name}}.skills.{{skill.name}}.value" min="0" max="{{skill.max}}" data-dtype="Number" value="{{skill.value}}" />
+            </li>
+            {{/each}}
+        </ul>
+        {{/each}}
+    </div>
+
+    <div class="pc-sheet__tabs">
+        {{!-- Sheet tabs navigation --}}
+        <nav class="sheet-tabs tabs" data-group="primary">
+            <a class="item" data-tab="description">{{localize config.tabs.description}}</a>
+        </nav>
+
+        <section class="sheet-body">
+            {{!-- Description tab --}}
+            <div class="tab description" data-group="primary" data-tab="description">
+                {{editor content=data.description target="data.description" button=true owner=owner editable=editable}}
+            </div>
+        </section>
+    </div>
+
+</form>

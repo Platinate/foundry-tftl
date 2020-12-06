@@ -1,0 +1,64 @@
+{
+    "tftl": {
+        "type": {
+            "bookWorm": "Intello",
+            "computerGeek": "Geek",
+            "hick": "Campagnard",
+            "jock": "Sportif",
+            "popularKid": "Star de l'école",
+            "rocker": "Métalleux",
+            "troublemaker": "Rebelle",
+            "weirdo": "Excentrique"
+        },
+        "info" : {
+            "name": "Nom",
+            "type": "Type",
+            "luck": "Chance",
+            "age": "Age",
+            "drive": "Motivation",
+            "anchor": "Socle",
+            "problem": "Problème",
+            "pride": "Fierté",
+            "description": "Description",
+            "favoriteSong": "Chanson favorite"
+        },
+        "condition" : {
+            "upset": "Contrarié",
+            "scared": "Effrayé",
+            "exhausted": "Épuisé",
+            "injured": "Blessé",
+            "broken": "Brisé"
+        },
+        "tab": {
+            "description": "Description"
+        },
+        "attribute": {
+            "body": "Physique",
+            "tech": "Technique",
+            "heart": "Coeur",
+            "mind": "Intelligence"
+        },
+        "skill":{
+            "body" : {
+                "sneak": "Furtivité",
+                "force": "Force",
+                "move": "Agilité"
+            },
+            "tech" : {
+                "tinker": "Bricolage",
+                "program": "Programmation",
+                "calculate": "Analyse"
+            },
+            "heart" : {
+                "contact": "Réseau",
+                "charm": "Charme",
+                "lead": "Charisme"
+            },
+            "mind" : {
+                "investigate": "Découverte",
+                "comprehend": "Compréhension",
+                "empathize": "Empathie"
+            }
+        }
+    }
+}

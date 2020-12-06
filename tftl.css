@@ -1,0 +1,222 @@
+.grid {
+  display: grid !important;
+  width: 100%; }
+  .grid-col1 {
+    grid-template-columns: repeat(1, 1fr); }
+  .grid-col2 {
+    grid-template-columns: repeat(2, 1fr); }
+  .grid-col3 {
+    grid-template-columns: repeat(3, 1fr); }
+  .grid-col4 {
+    grid-template-columns: repeat(4, 1fr); }
+  .grid-col5 {
+    grid-template-columns: repeat(5, 1fr); }
+  .grid-col6 {
+    grid-template-columns: repeat(6, 1fr); }
+  .grid-col7 {
+    grid-template-columns: repeat(7, 1fr); }
+  .grid-col8 {
+    grid-template-columns: repeat(8, 1fr); }
+  .grid-col9 {
+    grid-template-columns: repeat(9, 1fr); }
+  .grid-col10 {
+    grid-template-columns: repeat(10, 1fr); }
+  .grid-col11 {
+    grid-template-columns: repeat(11, 1fr); }
+  .grid-col12 {
+    grid-template-columns: repeat(12, 1fr); }
+  .grid-center-h {
+    justify-content: center; }
+  .grid-center-v {
+    align-content: center; }
+
+.full {
+  height: 100%;
+  width: 100%; }
+
+.pc .window-content {
+  background-color: white !important;
+  background: none; }
+
+.pc .sheet-body {
+  height: calc(100% - 32px);
+  width: 100%;
+  padding: 10px; }
+  .pc .sheet-body .tab {
+    height: 100%;
+    width: 100%; }
+    .pc .sheet-body .tab .editor {
+      height: 100%; }
+
+.pc-sheet {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 180px 35px 120px 1fr;
+  row-gap: 10px; }
+  .pc-sheet label {
+    margin: auto 5px;
+    height: 100%; }
+  .pc-sheet input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: none; }
+    .pc-sheet input:focus {
+      outline-color: transparent !important; }
+  .pc-sheet select {
+    height: 100%;
+    width: 100%; }
+  .pc-sheet__header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    width: 100%;
+    height: 100%;
+    column-gap: 10px; }
+  .pc-sheet__image {
+    width: 180px;
+    height: 180px;
+    background: #FBE0C2;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid black; }
+  .pc-sheet__info {
+    display: grid;
+    border: 2px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    background: #FBE0C2;
+    box-sizing: border-box;
+    grid-gap: 1px;
+    grid-template: "name type" calc(100%/6) "age luck" calc(100%/6) "drive anchor" calc(100%/6) "problem problem" calc(100%/6) "pride pride" calc(100%/6) "song song" calc(100%/6)/1fr 1fr; }
+    .pc-sheet__info label {
+      width: auto;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      width: 120px;
+      position: relative; }
+      .pc-sheet__info label:after {
+        position: absolute;
+        content: ":";
+        right: 0; }
+  .pc-sheet__attributes {
+    display: grid;
+    column-gap: 10px;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr); }
+    .pc-sheet__attributes ul {
+      list-style: none;
+      border: 2px solid black;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0; }
+      .pc-sheet__attributes ul li {
+        height: 30px;
+        font-weight: bold;
+        font-size: 1.2em;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        line-height: 30px; }
+        .pc-sheet__attributes ul li input {
+          background-color: white;
+          width: 30px;
+          height: 25px;
+          text-align: center; }
+      .pc-sheet__attributes ul li.attribute {
+        background-color: #EF800C; }
+      .pc-sheet__attributes ul li.skill {
+        background-color: #FFDD9E; }
+  .pc-sheet__tabs {
+    border: 2px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    background: #FBE0C2; }
+    .pc-sheet__tabs .tabs {
+      margin: 0 !important; }
+      .pc-sheet__tabs .tabs .active {
+        background: #F49C43;
+        text-shadow: none; }
+      .pc-sheet__tabs .tabs .item:hover {
+        text-shadow: none;
+        background: #FFDD9E; }
+  .pc-sheet__name {
+    display: flex;
+    flex-direction: row;
+    grid-area: name; }
+  .pc-sheet__type {
+    display: flex;
+    flex-direction: row;
+    grid-area: type;
+    box-shadow: 0 0 0 1px #000; }
+  .pc-sheet__age {
+    display: flex;
+    flex-direction: row;
+    grid-area: age;
+    box-shadow: 0 0 0 1px #000; }
+  .pc-sheet__luck {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-area: luck;
+    box-shadow: 0 0 0 1px #000; }
+  .pc-sheet__drive {
+    display: flex;
+    flex-direction: row;
+    grid-area: drive;
+    box-shadow: 0 0 0 1px #000; }
+  .pc-sheet__anchor {
+    display: flex;
+    flex-direction: row;
+    grid-area: anchor;
+    box-shadow: 0 0 0 1px #000; }
+  .pc-sheet__problem {
+    display: flex;
+    flex-direction: row;
+    grid-area: problem;
+    box-shadow: 0 0 0 1px #000; }
+  .pc-sheet__pride {
+    display: flex;
+    flex-direction: row;
+    grid-area: pride;
+    box-shadow: 0 0 0 1px #000; }
+  .pc-sheet__song {
+    display: flex;
+    flex-direction: row;
+    grid-area: song; }
+    .pc-sheet__song label {
+      width: 150px; }
+  .pc-sheet__conditions {
+    display: grid;
+    height: 35px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    grid-gap: 1px;
+    grid-template-columns: repeat(6, 1fr); }
+    .pc-sheet__conditions div {
+      background: #FBE0C2;
+      padding: 0 5px;
+      overflow: hidden;
+      vertical-align: middle;
+      line-height: 35px; }
+    .pc-sheet__conditions div:first-child {
+      background-color: #000;
+      color: white; }
+    .pc-sheet__conditions div:last-child {
+      background-color: #F9CA9D;
+      color: white; }
+
+.condition__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+  .condition__input label {
+    display: block;
+    margin: auto 0;
+    line-height: 32px;
+    flex: 80%; }
+  .condition__input input {
+    flex: 20%; }

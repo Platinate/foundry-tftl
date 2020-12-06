@@ -1,4 +1,109 @@
 {
-    "Actor": {},
-    "Items": {}
+    "Actor": {
+        "types": ["pc"],
+        "pc": {
+            "age": 10,
+            "luckPoints": 5,
+            "type": "",
+            "experience": 0,
+            "anchor": "",
+            "drive": "",
+            "problem": "",
+            "pride": "",
+            "prideUsed": 1,
+            "description": "",
+            "favoriteSong": "",
+            "notes": "",
+            "attributes": {
+                "body": {
+                    "current": 0,
+                    "skills": {
+                        "sneak": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "force": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "move": {
+                            "value": 0,
+                            "max": 5
+                        }
+                    }
+                },
+                "tech": {
+                    "current": 0,
+                    "skills": {
+                        "tinker": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "program": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "calculate": {
+                            "value": 0,
+                            "max": 5
+                        }
+                    }
+                },
+                "heart": {
+                    "current": 0,
+                    "skills": {
+                        "contact": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "charm": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "lead": {
+                            "value": 0,
+                            "max": 5
+                        }
+                    }
+                },
+                "mind": {
+                    "current": 0,
+                    "skills": {
+                        "investigate": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "comprehend": {
+                            "value": 0,
+                            "max": 5
+                        },
+                        "empathize": {
+                            "value": 0,
+                            "max": 5
+                        }
+                    }
+                }
+            },
+            "conditions": {
+                "upset": false,
+                "scared": false,
+                "exhausted": false,
+                "injured": false,
+                "broken": false
+            }
+        }
+    },
+    "Item": {
+        "types": [
+            "item",
+            "relationship"
+        ],
+        "item": {
+            "bonus": 1,
+            "iconic": false
+        },
+        "relationship": {
+            "description": ""
+        }
+    }
 }

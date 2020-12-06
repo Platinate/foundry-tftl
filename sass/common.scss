@@ -1,0 +1,19 @@
+.grid {
+    display: grid !important;
+    width: 100%;
+    @for $var from 1 to 13 {
+      &-col#{$var} {
+        grid-template-columns: repeat($var, 1fr);
+      }
+    }
+    &-center-h {
+        justify-content: center;
+    }
+    &-center-v {
+        align-content: center;
+    }
+  }
+.full {
+    height: 100%;
+    width: 100%;
+}
